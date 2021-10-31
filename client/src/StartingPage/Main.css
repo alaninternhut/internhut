@@ -1,0 +1,23 @@
+img {
+  margin-top: 20%;
+}
+
+.heading {
+  margin-top: 10%;
+}
+
+.paragraph {
+  margin-top: -1%;
+}
+
+.link {
+  margin-top: -19%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

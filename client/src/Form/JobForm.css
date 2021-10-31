@@ -1,0 +1,12 @@
+body {
+  margin: 5% 15%;
+}
+
+h4 {
+  color: #222054;
+}
+
+.subscribers-container {
+  display: flex;
+  flex-direction: column;
+}
