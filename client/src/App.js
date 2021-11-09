@@ -1,15 +1,16 @@
-import { Main } from './StartingPage/Main'
+import HomePage from './StartingPage/HomePage'
 import { JobForm } from './Form/JobForm'
-import './App.css'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import Track from './Track/Track'
 
 function App() {
   return (
     <BrowserRouter>
       <div className='App'>
         <Switch>
-          <Route path='/' component={Main} exact />
+          <Route path='/' component={HomePage} exact />
           <Route path='/JobForm' component={JobForm} />
+          <Route path='/Track' component={Track} />
         </Switch>
       </div>
     </BrowserRouter>
