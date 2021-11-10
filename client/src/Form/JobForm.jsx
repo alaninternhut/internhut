@@ -4,9 +4,16 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import './JobForm.css'
-const axios = require('axios').default;
+import Axios from 'axios'
+import styled from 'styled-components'
+
+const Container = styled.div`
+  margin: 7%;
+`
 
 export const JobForm = () => {
+  const url = 'https://internhut.herokuapp.com/api/job/add-job'
+
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [position, setPosition] = useState('Full-time employee')
@@ -44,13 +51,13 @@ export const JobForm = () => {
       subscriber,
     }
 
-    console.log(data)
-    axios.post('/api/job/add-job',data)
-    .then(()=>console.log("job saved"))
+    Axios.post(url, data).then((res) => {
+      console.log(res.data)
+    })
   }
 
   return (
-    <div>
+    <Container>
       <Form onSubmit={handlePublish}>
         <h4 style={{ marginBottom: '2%' }}>1. Job Details</h4>
         <Form.Group className='mb-3'>
@@ -323,6 +330,6 @@ export const JobForm = () => {
           Publish
         </Button>
       </Form>
-    </div>
+    </Container>
   )
 }
