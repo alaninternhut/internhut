@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 export const JobForm = () => {
-  const url = 'https://internhut.herokuapp.com/api/job/add-job'
+  const url = '/api/job/add-job'
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')

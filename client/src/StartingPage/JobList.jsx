@@ -64,7 +64,7 @@ const JobList = () => {
     const fetchPosts = async () => {
       setLoading(true)
       const res = await axios.get(
-        'https://internhut.herokuapp.com/api/job/get-all-jobs'
+        '/api/job/get-all-jobs'
       )
       setPosts(res.data)
       setLoading(false)
